@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "g++",
+    "args": [
+        "-g", 
+        "-std=c++11", 
+        "${file}", 
+        "-o", 
+        "${fileBasenameNoExtension}.o",  
+        "-I", "D:\\OpenCV\\OpenCV_4.5.2\\opencv\\build\\include",
+        "-I", "D:\\OpenCV\\OpenCV_4.5.2\\opencv\\build\\include\\opencv2",
+        "-L", "D:\\OpenCV\\OpenCV_4.5.2\\opencv\\mingwbuild\\install\\x64\\mingw\\lib",
+        "-l", "opencv_core452",
+        "-l", "opencv_imgproc452",
+        "-l", "opencv_imgcodecs452",
+        "-l", "opencv_video452",
+        "-l", "opencv_ml452",
+        "-l", "opencv_highgui452",
+        "-l", "opencv_objdetect452",
+        "-l", "opencv_flann452",
+        "-l", "opencv_imgcodecs452",
+        "-l", "opencv_photo452",
+        "-l", "opencv_videoio452"
+  
+    ],// 编译命令参数
+    "problemMatcher":{
+        "owner": "cpp",
+        "fileLocation":[
+            "relative",
+            "${workspaceFolder}"
+        ],
+        "pattern":[
+            {
+                "regexp": "^([^\\\\s].*)\\\\((\\\\d+,\\\\d+)\\\\):\\\\s*(.*)$",
+                "file": 1,
+                "location": 2,
+                "message": 3
+            }
+        ]
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+  }
+  
